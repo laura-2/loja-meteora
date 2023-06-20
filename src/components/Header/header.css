@@ -1,0 +1,94 @@
+@import url("../../App.css");
+
+.header{
+    background-color: var(--black-color);
+}
+.header-link, .header-link:hover{
+    color: var(--white-color);
+    font-weight: var(--font-weight400);
+    font-size: 16px;
+}
+.header-input{
+    font-weight: var(--font-weight400);
+    font-size: 15px;
+}
+.header-button{
+    font-weight: var(--font-weight500);
+    border: 1px solid var(--white-color);
+    color: var(--white-color);
+    font-size: 16px;
+    background-color: var(--black-color);
+}
+.header-mobile, .menu-open, .header-search-mobile, .header-input-mobile, .header-button-mobile{
+    display: none;
+}
+
+
+@media (max-width: 768px){
+    .header-link{
+        font-size: 13px;
+    }
+    .header-input{
+        width: 170px;
+    }
+}
+
+@media (max-width: 375px){
+    .header-tablet{
+        display: none;
+    }
+    .header-search, .header-input, .header-button{
+        display: none;
+    }
+    .header-search-mobile{
+        display: flex;
+        margin: 5%;
+    }
+    .header-input-mobile{
+        display: flex;
+        border: 2px solid var(--black-color);
+        border-radius: 0;
+    }
+    .header-button-mobile{
+        display: flex;
+        border: 2px solid var(--black-color);
+        border-radius: 0;
+        background-color: var(--white-color);
+        color: var(--black-color);
+    }
+    .menu-open, .header-mobile{
+        display: flex;
+    }
+    .menu-open{
+        margin-left: 55%;
+    }
+    .header-menu-links{
+        display: block;
+        position: absolute;
+        height: 450%;
+        width: 36%;
+        margin-top: 150px;
+        flex-direction: column;
+        margin-left: 230px;
+        background-color: var(--gray-dark);
+        padding: 20px 10px 0px 10px;
+    }
+    .header-link{
+        text-decoration: none;
+        color: var(--white-color);
+        font-size: 16px;
+        font-weight: var(--font-weight400);
+    }
+    .link-color{
+        color: var(--yellow-color);
+    }
+    .header-link-color{
+        height: 3px;
+        color: var(--white-color);
+        margin-block: -1px;
+    }
+    .header-menu-close{
+        width: 10%;
+        margin-left: 90px;
+    }
+}

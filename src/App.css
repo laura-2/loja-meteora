@@ -1,9 +1,15 @@
 :root{
   --black-color: #000000;
   --gray-color: #CCCCCC;
+  --gray-dark: #343A40;
   --yellow-color: #DAFF01;
   --purple-color: #9353FF;
   --pink-color: #ee6471;
   --orange-color: #f87f46;
   --white-color: #ffffff;
+  --font-family: 'Inter', sans-serif;
+  --font-weight400: 400;
+  --font-weight500: 500;
+  --font-weight700: 700;
+
 }
