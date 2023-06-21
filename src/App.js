@@ -4,7 +4,7 @@ import Home from "./components/Home";
 
 function App() {
   return (
-    <Container fluid="auto" className='m-0'>
+    <Container fluid="auto">
       <Home/>
       </Container>
   );

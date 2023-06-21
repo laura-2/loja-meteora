@@ -49,7 +49,9 @@ export default function Header(){
                     type="search"
                     placeholder="Digite o produto"
                     className="me-2 header-input"
+                    id="text"
                     aria-label="Search"
+                    autoComplete="off"
                     />
                     <Button className="header-button" variant="dark">Buscar</Button>
                 </Form>
@@ -61,6 +63,8 @@ export default function Header(){
                     placeholder="Digite o produto"
                     className="me-2 header-input-mobile"
                     aria-label="Search"
+                    id="search"
+                    autoComplete="off"
                     />
                     <Button className="header-button-mobile" variant="link">Buscar</Button>
                 </Form>

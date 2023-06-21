@@ -21,3 +21,21 @@
     font-weight: var(--font-weight500);
     color: var(--white-color);
 }
+@media (max-width: 768px){
+    .category{
+        font-size: 28px;
+    }
+    .margin-tablet{
+        margin-right:50px;
+    }
+    .margin-camisa{
+        margin-left: 50px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 375px){
+    .category-section{
+        margin: 5% 0% 5% 15%;
+    }
+}

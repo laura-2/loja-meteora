@@ -57,7 +57,7 @@ export default function CardPrice (){
       </Row>
       <Row className="justify-content-md-center mb-5" xs="auto">
       <Col>
-      <Card className="card-image">
+      <Card className="card-image jacket-card">
         <Card.Img variant="top" className="card-image-border" src={Casaco} />
         <Card.Body>
         <Card.Title className="card-title-price">Jaqueta Jeans</Card.Title>

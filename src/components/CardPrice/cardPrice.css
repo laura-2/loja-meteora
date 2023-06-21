@@ -37,3 +37,22 @@
     background-color: var(--purple-color);
     padding: 5px 16px;
 }
+@media(max-width: 768px){
+    .title{
+        font-size: 28px;
+    }
+    .card-image{
+        margin: 5% 0% 0 3%;
+    }
+    .jacket-card{
+        margin-top: 0;
+    }
+}
+@media(max-width: 375px){
+    .card-image{
+        margin: 5% 5% 0 3%;
+    }
+    .jacket-card{
+        margin-top: 0;
+    }
+}

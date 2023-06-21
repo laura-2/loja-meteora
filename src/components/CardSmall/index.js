@@ -16,7 +16,7 @@ export default function CardSmall (){
       <h3 className="category">Busque por categoria:</h3>
       <Row className="justify-content-md-center" xs="auto">
         <Col>
-        <Card className="category-section">
+        <Card className="category-section margin-camisa">
         <Card.Img variant="top" src={Camisa} className="category-image"/>
         <Card.Body className="category-body">
           <Card.Text className="category-text">
@@ -36,7 +36,7 @@ export default function CardSmall (){
       </Card>
       </Col>
       <Col>
-      <Card className="category-section">
+      <Card className="category-section margin-tablet">
         <Card.Img variant="top" src={Calcado} className="category-image"/>
         <Card.Body className="category-body">
           <Card.Text className="category-text">
