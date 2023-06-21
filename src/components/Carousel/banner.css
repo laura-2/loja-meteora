@@ -47,6 +47,7 @@
     .banner-image{
         object-fit: contain;
         height: auto;
+        z-index: 0;
     }
     .banner-caption-left{
         margin: 0;

@@ -1,0 +1,78 @@
+@import url("../../App.css");
+.footer-div-title{
+    color: var(--yellow-color);
+    font-weight: var(--font-weight700);
+    font-size: 16px;
+}
+.footer-div-text{
+    color: var(--white-color);
+    font-weight: var(--font-weight400);
+    font-size: 13px;
+}
+.footer-section-icons{
+    background-color: var(--black-color);
+}
+.footer-divs{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5% 0;
+}
+.footer{
+    color: var(--white-color);
+    font-weight: var(--font-weight500);
+    font-size: 32px;
+    text-align: center;
+    padding: 5% 0 0 0;
+}
+.footer-section-image{
+    margin-bottom: 5%;
+}
+.footer-flex{
+    display: flex;
+}
+.footer-div{
+    display: block;
+    width: 55%;
+    margin: 0 0 0 20px;
+}
+.footer-section-email{
+    border: 1px solid var(--black-color);
+    margin: 5% 20%;
+    padding: 3% 0;
+}
+.footer-section-email-text{
+    color: var(--black-color-light);
+    font-weight: var(--font-weight500);
+    font-size: 20px;
+    padding: 0 0 3% 0;
+    text-align: center;
+}
+.footer-email-flex{
+    display: flex;
+    justify-content: center;
+}
+.footer-section-input{
+    border: 1px solid var(--black-color);
+    font-weight: var(--font-weight400);
+    font-size: 16px;
+    padding: 1% 30% 1% 1%;
+}
+.footer-section-button{
+    font-weight: var(--font-weight500);
+    font-size: 16px;
+    color: var(--white-color);
+    border: 1px solid var(--purple-color);
+    background-color: var(--purple-color);
+    padding: 1% 2%;
+}
+.footer-alura{
+    background-color: var(--black-color);
+}
+.footer-alura-text{
+    font-weight: var(--font-weight400);
+    font-size: 13px;
+    color: var(--white-color);
+    padding: 1% 0;
+    text-align: center;
+}

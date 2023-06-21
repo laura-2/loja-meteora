@@ -1,0 +1,39 @@
+@import url("../../App.css");
+.title{
+    text-align: center;
+    font-size: 32px;
+    font-weight: var(--font-weight500);
+    color: var(--black-color-light);
+    margin: 5% 0 3% 0;
+}
+.card-image{
+    height: 600px;
+    width: 350px;
+    border-radius: 0%;
+
+}
+.card-image-border{
+    border-radius: 0%;
+
+}
+.card-title-price{
+    text-align: start;
+    font-size: 16px;
+    font-weight: var(--font-weight700);
+    color: var(--black-color-light);
+}
+.card-text{
+    text-align: start;
+    font-size: 13px;
+    font-weight: var(--font-weight400);
+    color: var(--black-color-light);
+}
+.card-button{
+    text-align: start;
+    font-size: 16px;
+    font-weight: var(--font-weight500);
+    color: var(--white-color);
+    border: 1px solid var(--purple-color);
+    background-color: var(--purple-color);
+    padding: 5px 16px;
+}

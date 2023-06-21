@@ -1,0 +1,23 @@
+@import url("../../App.css");
+.category{
+    text-align: center;
+    font-size: 32px;
+    font-weight: var(--font-weight500);
+    color: var(--black-color-light);
+    margin: 5% 0 3% 0;
+}
+.category-section{
+    border-radius: 0%;
+}
+.category-image{
+    border-radius: 0%;
+}
+.category-body{
+    background-color: var(--black-color);
+}
+.category-text{
+    text-align: center;
+    font-size: 16px;
+    font-weight: var(--font-weight500);
+    color: var(--white-color);
+}

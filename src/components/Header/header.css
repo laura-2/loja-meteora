@@ -60,6 +60,7 @@
     }
     .menu-open, .header-mobile{
         display: flex;
+        z-index: 1;
     }
     .menu-open{
         margin-left: 55%;

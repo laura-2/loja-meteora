@@ -10,8 +10,16 @@ import "./banner.css"
 
 export default function Banner(){
     const widthScreen = window.screen.width;
+    const getWidth = (event) => {
+        event.preventDefault()
+        if (widthScreen <= 768){
+            return true
+        } else {
+            return false
+        }
+    }
     return(
-    <Carousel indicators={widthScreen <= 768 ? true : false}>
+    <Carousel indicators={getWidth}>
         <Carousel.Item interval={2000}>
             <img
             className="d-block w-100 banner-image"
