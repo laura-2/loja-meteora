@@ -61,7 +61,7 @@ export default function Header(){
                     className="me-2 header-input-mobile"
                     aria-label="Search"
                     />
-                    <Button className="header-button-mobile" variant="dark">Buscar</Button>
+                    <Button className="header-button-mobile" variant="link">Buscar</Button>
                 </Form>
             </>
     )

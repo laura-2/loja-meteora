@@ -1,0 +1,55 @@
+@import url("../../App.css");
+
+.banner-caption{
+    margin: 0 -5% 8% 30%;
+    text-align: end;
+}
+.banner-image{
+    object-fit: cover;
+    height: 390px;
+}
+.banner-caption-left{
+    margin: 0 30% 8% -5%;
+    text-align: start;
+}
+.banner-title{
+    font-size: 48px;
+    font-weight: var(--font-weight500);
+    text-transform: uppercase;
+}
+.banner-subtitle{
+    font-size: 20px;
+    font-weight: var(--font-weight400);
+}
+@media (max-width: 768px){
+    .banner-caption{
+        margin: 0 -5% 3% 20%;
+    }
+    .banner-image{
+        object-fit: contain;
+        height: 222px;
+    }
+    .banner-caption-left{
+        margin: 0 20% 3% -5%;
+    }
+    .banner-title{
+        font-size: 32px;
+    }
+    .banner-subtitle{
+        font-size: 16px;
+    }
+}
+@media (max-width: 375px){
+    .banner-caption{
+        margin: 0;
+        text-align: center;
+    }
+    .banner-image{
+        object-fit: contain;
+        height: auto;
+    }
+    .banner-caption-left{
+        margin: 0;
+        text-align: center;
+    }
+}

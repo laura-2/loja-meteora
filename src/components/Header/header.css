@@ -13,6 +13,7 @@
     font-size: 15px;
 }
 .header-button{
+    text-decoration: none;
     font-weight: var(--font-weight500);
     border: 1px solid var(--white-color);
     color: var(--white-color);
@@ -50,6 +51,7 @@
         border-radius: 0;
     }
     .header-button-mobile{
+        text-decoration: none;
         display: flex;
         border: 2px solid var(--black-color);
         border-radius: 0;
