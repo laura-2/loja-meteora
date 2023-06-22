@@ -4,6 +4,7 @@ body {
   padding: 0;
   font-family: var(--font-family);
   overflow-x: hidden;
+  overflow-y: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
