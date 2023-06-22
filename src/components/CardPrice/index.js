@@ -42,7 +42,7 @@ export default function CardPrice (){
       </Card>
       </Col>
       <Col>
-      <Card className="card-image">
+      <Card className="card-image calcado-card">
         <Card.Img variant="top" className="card-image-border" src={Calcado} />
         <Card.Body>
         <Card.Title className="card-title-price">Tênis Chunky</Card.Title>
@@ -70,7 +70,7 @@ export default function CardPrice (){
       </Card>
       </Col>
       <Col>
-      <Card className="card-image">
+      <Card className="card-image oculos-card">
         <Card.Img variant="top" className="card-image-border" src={Oculos} />
         <Card.Body>
         <Card.Title className="card-title-price">Óculos Redondo</Card.Title>
@@ -83,7 +83,7 @@ export default function CardPrice (){
       </Card>
       </Col>
       <Col>
-      <Card className="card-image">
+      <Card className="card-image bolsa-card">
         <Card.Img variant="top" className="card-image-border" src={Bolsa} />
         <Card.Body>
         <Card.Title className="card-title-price">Bolsa coringa</Card.Title>

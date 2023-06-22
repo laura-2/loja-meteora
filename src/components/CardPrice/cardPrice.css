@@ -42,10 +42,23 @@
         font-size: 28px;
     }
     .card-image{
-        margin: 5% 0% 0 3%;
+        margin: 5% 0% 0 2%;
     }
     .jacket-card{
         margin-top: 0;
+        margin-left: 109%;
+        margin-top: -178%;
+    }
+    .calcado-card{
+        margin-left: -52%;
+    }
+    .oculos-card{
+        margin-top: -2%;
+        margin-left: -106%;
+    }
+    .bolsa-card{
+        margin-left: 55%;
+        margin-top: -171%;
     }
 }
 @media(max-width: 375px){

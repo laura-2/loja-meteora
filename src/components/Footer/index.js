@@ -24,7 +24,7 @@ export default function FooterPage(){
                                 <p className="footer-div-text">Fique livre para trocar em até 30 dias.</p>
                             </div>
                         </div>
-                        <div className="footer-flex" style={{marginLeft: "20px"}}>
+                        <div className="footer-flex flower-margin">
                             <img src={Flower} alt="Flower Icon" className="footer-section-image"/>
                             <div className="footer-div">
                                 <h2 className="footer-div-title">SUSTENTABILIDADE</h2>

@@ -77,12 +77,18 @@
     padding: 1% 0;
     text-align: center;
 }
-
-@media(max-width: 375px){
+@media (max-width: 768px){
     .footer-divs{
         display: block;
-        justify-content: center;
+        padding: 5% 0 0 15%;
     }
+    .footer-section-email{
+        margin: 5% 10%;
+        padding: 3% 5%;
+    }
+}
+
+@media(max-width: 375px){
     .footer{
         font-size: 24px;
     }
@@ -107,5 +113,11 @@
     }
     .footer-alura-text{
         padding: 2% 20%;
+    }
+    .flower-margin{
+        margin-left: 15px;
+    }
+    .footer-divs{
+        padding: 5% 0 0 3%;
     }
 }
