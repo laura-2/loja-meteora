@@ -1,34 +1,40 @@
 @import url("../../App.css");
-.title{
+
+.title {
     text-align: center;
     font-size: 32px;
     font-weight: var(--font-weight500);
     color: var(--black-color-light);
     margin: 5% 0 3% 0;
 }
-.card-image{
+
+.card-image {
     height: 600px;
     width: 350px;
     border-radius: 0%;
 
 }
-.card-image-border{
+
+.card-image-border {
     border-radius: 0%;
 
 }
-.card-title-price{
+
+.card-title-price {
     text-align: start;
     font-size: 16px;
     font-weight: var(--font-weight700);
     color: var(--black-color-light);
 }
-.card-text{
+
+.card-text {
     text-align: start;
     font-size: 13px;
     font-weight: var(--font-weight400);
     color: var(--black-color-light);
 }
-.card-button{
+
+.card-button {
     text-align: start;
     font-size: 16px;
     font-weight: var(--font-weight500);
@@ -37,6 +43,7 @@
     background-color: var(--purple-color);
     padding: 5px 16px;
 }
+
 .modal {
     position: fixed;
     top: 0;
@@ -47,44 +54,95 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-.modal-content {
-background-color: white;
-padding: 20px;
-border-radius: 8px;
-max-width: 400px;
 }
 
-@media(max-width: 768px){
-    .title{
+.modal-content {
+    background-color: white;
+    border-radius: 8px;
+    max-width: 800px;
+}
+
+.modal-flex {
+    display: flex;
+    gap: 2rem;
+}
+
+.modal-header {
+    background-color: var(--black-color);
+}
+
+.modal-title {
+    color: var(--white-color);
+}
+
+.modal-label,
+.modal-input {
+    margin: 5px
+}
+
+.modal-button {
+    margin-top: 1rem;
+    font-size: 16px;
+    font-weight: var(--font-weight500);
+    color: var(--white-color);
+    border: 1px solid var(--purple-color);
+    background-color: var(--purple-color);
+    padding: 5px 16px;
+}
+.modal-icon{
+    margin-right: -300px;
+}
+@media(max-width: 768px) {
+    .title {
         font-size: 28px;
     }
-    .card-image{
+
+    .card-image {
         margin: 5% 0% 0 2%;
     }
-    .jacket-card{
+
+    .jacket-card {
         margin-top: 0;
         margin-left: 109%;
         margin-top: -178%;
     }
-    .calcado-card{
+
+    .calcado-card {
         margin-left: -52%;
     }
-    .oculos-card{
+
+    .oculos-card {
         margin-top: -2%;
         margin-left: -106%;
     }
-    .bolsa-card{
+
+    .bolsa-card {
         margin-left: 55%;
         margin-top: -171%;
     }
 }
-@media(max-width: 375px){
-    .card-image{
+
+@media(max-width: 375px) {
+    .card-image {
         margin: 5% 5% 0 3%;
     }
-    .jacket-card{
+
+    .jacket-card {
         margin-top: 0;
+    }
+    .modal-content {
+        max-width: 300px;
+        margin: 1rem;
+    }
+    .modal-image{
+        width: 270px;
+    }
+    
+    .modal-flex {
+        display: block;
+        gap: 1rem;
+    }
+    .modal-icon{
+        margin-right: 10px;
     }
 }
