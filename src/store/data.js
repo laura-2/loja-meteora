@@ -1,9 +1,9 @@
-import Camisa from "./assets/Desktop/Imagens Cards/Camiseta.png"
-import Bolsa from "./assets/Desktop/Imagens Cards/Bolsa.png"
-import Calcado from "./assets/Desktop/Imagens Cards/Tenis.png"
-import Calca from "./assets/Desktop/Imagens Cards/Calça.png"
-import Casaco from "./assets/Desktop/Imagens Cards/Jaqueta.png"
-import Oculos from "./assets/Desktop/Imagens Cards/óculos.png"
+import Camisa from "../assets/Desktop/Imagens Cards/Camiseta.png"
+import Bolsa from "../assets/Desktop/Imagens Cards/Bolsa.png"
+import Calcado from "../assets/Desktop/Imagens Cards/Tenis.png"
+import Calca from "../assets/Desktop/Imagens Cards/Calça.png"
+import Casaco from "../assets/Desktop/Imagens Cards/Jaqueta.png"
+import Oculos from "../assets/Desktop/Imagens Cards/óculos.png"
 
 export const clothes = [
     { id: 0,

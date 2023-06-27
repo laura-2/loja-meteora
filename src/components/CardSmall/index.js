@@ -1,13 +1,11 @@
 import React from "react"
-import Card from 'react-bootstrap/Card';
+import {Card, Row, Col} from 'react-bootstrap';
 import Camisa from "../../assets/Desktop/Categorias/Categoria camiseta.png"
 import Bolsa from "../../assets/Desktop/Categorias/Categoria Bolsa.png"
 import Calcado from "../../assets/Desktop/Categorias/Categoria Calçados.png"
 import Calca from "../../assets/Desktop/Categorias/Categoria calça.png"
 import Casaco from "../../assets/Desktop/Categorias/Categoria casacos.png"
 import Oculos from "../../assets/Desktop/Categorias/Categoria óculos.png"
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import "./cardSmall.css"
 
 export default function CardSmall (){

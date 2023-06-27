@@ -12,6 +12,7 @@
     height: 600px;
     width: 350px;
     border-radius: 0%;
+    margin-bottom: 1rem;
 
 }
 
@@ -73,6 +74,7 @@
 
 .modal-title {
     color: var(--white-color);
+    margin-right: 35%;
 }
 
 .modal-label,
@@ -90,7 +92,7 @@
     padding: 5px 16px;
 }
 .modal-icon{
-    margin-right: -300px;
+    margin-right: -20px;
 }
 @media(max-width: 768px) {
     .title {
@@ -141,8 +143,5 @@
     .modal-flex {
         display: block;
         gap: 1rem;
-    }
-    .modal-icon{
-        margin-right: 10px;
     }
 }

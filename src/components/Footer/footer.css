@@ -77,6 +77,36 @@
     padding: 1% 0;
     text-align: center;
 }
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 8px;
+    max-width: 800px;
+}
+
+.modal-header {
+    background-color: var(--black-color);
+}
+
+.modal-title {
+    color: var(--white-color);
+    margin-right: 35%;
+}
+
+.modal-icon{
+    margin-right: -20px;
+}
 @media (max-width: 768px){
     .footer-divs{
         display: block;
@@ -119,5 +149,11 @@
     }
     .footer-divs{
         padding: 5% 0 0 3%;
+    }
+    .modal-icon{
+        margin-right: 10px;
+    }
+    .modal-title {
+        margin-right: 15%;
     }
 }

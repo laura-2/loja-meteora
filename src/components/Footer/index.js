@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Arrow from "../../assets/Desktop/Ícones/arrow-repeat (2).png";
 import Flower from "../../assets/Desktop/Ícones/flower1 (3).png";
 import Diamond from "../../assets/Desktop/Ícones/x-diamond (2).png";
+import check from "../../assets/Desktop/Ícones/check-circle.png"
+import close from "../../assets/Desktop/Ícones/Icon Color.png"
+import { Modal } from "react-bootstrap";
 import "./footer.css";
 export default function FooterPage(){
+    const [modalOpen, setModalOpen] = useState(false);
     
     return (
             <footer style={{marginBottom: "-20px"}}>
@@ -36,8 +40,24 @@ export default function FooterPage(){
                 <section className="footer-section-email">
                     <h5 className="footer-section-email-text">Quer receber nossas novidades, promoções exclusivas e 10% OFF na primeira compra? Cadastre-se!</h5>
                     <div className="footer-email-flex">
-                        <input placeholder="Digite seu email" autoComplete="off" type="text" id="email" className="footer-section-input"></input>
-                        <button className="footer-section-button">Enviar</button>
+                        <input placeholder="Digite seu email" type="text" id="email" required className="footer-section-input"></input>
+                        <button className="footer-section-button" onClick={()=> setModalOpen(true)}>Enviar</button>
+                        {modalOpen && (
+                            <div className="modal">
+                            <div className="modal-content">
+                                <Modal.Header className="modal-header">
+                                <img src={check} alt='Icon check' className="modal-icon"/>
+                                <Modal.Title id="contained-modal-title-left" className="modal-title">
+                                E-mail cadastrado com sucesso!
+                                </Modal.Title>
+                                    <img src={close} alt="Icon close" onClick={() => setModalOpen(!modalOpen)}/>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    <p>Em breve você receberá novidades exclusivas da Meteora.</p>
+                                </Modal.Body>
+                            </div>
+                            </div>
+                        )}
                     </div>
                 </section>
                 <section className="footer-alura">

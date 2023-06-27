@@ -2,13 +2,7 @@ import React , {useState} from "react";
 import LogoDesktop from "../../assets/Desktop/Logo desktop.png"
 import Menu from "../../assets/Mobile/Ícones/Icon Color.png"
 import Close from "../../assets/Mobile/Ícones/marca-cruzada 1.png"
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Image from 'react-bootstrap/Image';
-
+import {Button, Container, Form, Nav, Navbar, Image} from 'react-bootstrap';
 import "./header.css"
 export default function Header(){
     const [menu, setMenu] = useState(false);

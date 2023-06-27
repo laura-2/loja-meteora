@@ -1,9 +1,8 @@
 import React, {useState} from "react"
-import Card from 'react-bootstrap/Card';
-import {clothes} from '../../data'
+import {clothes} from '../../store/data'
 import check from "../../assets/Desktop/Ícones/check-circle.png"
 import close from "../../assets/Desktop/Ícones/Icon Color.png"
-import { Row, Col, Form, Modal} from 'react-bootstrap';
+import { Row, Col, Form, Modal, Card} from 'react-bootstrap';
 import "./cardPrice.css"
 export default function CardPrice (){
   const [modalShow, setModalShow] = useState(false);
@@ -11,11 +10,9 @@ export default function CardPrice (){
 
   const handleOpen = (cardId) => {
       setSelectedCard(cardId);
-      setModalShow(true)
+      setModalShow(!modalShow)
   };
-  const closeModal = () => {
-    setModalShow(modalShow);
-  };
+
   const listModel = clothes.map(clothes => 
     <div key={clothes.id}>
     <Col>
@@ -42,7 +39,6 @@ export default function CardPrice (){
         {listModel}
       </Row>
       {selectedCard && (
-        <>
         <div className="modal">
           <div className="modal-content">
           <Modal.Header className="modal-header">
@@ -50,7 +46,7 @@ export default function CardPrice (){
             <Modal.Title id="contained-modal-title-left" className="modal-title">
             Confira detalhes sobre o produto
             </Modal.Title>
-            <img src={close} alt="Icon close" onClick={closeModal}/>
+              <img src={close} alt="Icon close" onClick={() => setSelectedCard(!selectedCard)}/>
           </Modal.Header>
           <Modal.Body>
             <div className="modal-flex">
@@ -110,7 +106,6 @@ export default function CardPrice (){
             </Modal.Body>
          </div>
          </div>
-      </>
       )}
     </>
     
