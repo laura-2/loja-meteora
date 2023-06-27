@@ -1,8 +1,10 @@
 import React from 'react';
 import check from "../../assets/Desktop/Ícones/check-circle.png"
 import { Row, Col, Form, Modal } from 'react-bootstrap';
+import { clothes } from '../../data';
 
-const ModalShowDetails = ({props, data, closeModal})=> {
+function ModalShowDetails (props) {
+  let itensClothes = clothes.id;
   
   return (
     <Modal
@@ -20,13 +22,13 @@ const ModalShowDetails = ({props, data, closeModal})=> {
       <Modal.Body>
         <Row>
           <Col>
-          {/* <img src={data.imagem} alt='imagem-modelo'/> */}
+            <img src={itensClothes} alt='imagem-modelo'/>
           </Col>
           <Col>
-        <Modal.Title className="modal-title-price">{data.title}</Modal.Title>
-        <p className="modal-text">{data.text}</p>
+        <Modal.Title className="modal-title-price">{itensClothes}</Modal.Title>
+        <p className="modal-text">{itensClothes}</p>
         <hr/>
-        <Modal.Title className="modal-title-price">{data.price}</Modal.Title>
+        <Modal.Title className="modal-title-price">{itensClothes}</Modal.Title>
         <p className="modal-text-light">Vendido e entregue por Riachuelo</p>
         <hr/>
         <p className="modal-text-color">Cores:</p>
@@ -94,7 +96,6 @@ const ModalShowDetails = ({props, data, closeModal})=> {
         </Form>
 
         <button className="modal-button">Adicionar à sacola</button>
-        <button onClick={closeModal}>Fechar</button>
           </Col>
         </Row>
       </Modal.Body>

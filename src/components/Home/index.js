@@ -11,7 +11,7 @@ export default function Home(){
             <Header/>
             <Banner/>
             <CardSmall/>
-            <CardPrice/>
+            <CardPrice />
             <FooterPage/>
         </>
     )
