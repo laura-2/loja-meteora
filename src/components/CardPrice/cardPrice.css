@@ -67,7 +67,9 @@
     display: flex;
     gap: 2rem;
 }
-
+.modal-price, .modal-text{
+    color: var(--black-color) !important;
+}
 .modal-header {
     background-color: var(--black-color);
 }
@@ -133,11 +135,12 @@
         margin-top: 0;
     }
     .modal-content {
-        max-width: 300px;
+        max-width: 40%;
         margin: 1rem;
     }
     .modal-image{
-        width: 270px;
+        width: 50%;
+        margin-left: 25%;
     }
     
     .modal-flex {

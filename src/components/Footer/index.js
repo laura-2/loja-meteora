@@ -40,7 +40,7 @@ export default function FooterPage(){
                 <section className="footer-section-email">
                     <h5 className="footer-section-email-text">Quer receber nossas novidades, promoções exclusivas e 10% OFF na primeira compra? Cadastre-se!</h5>
                     <div className="footer-email-flex">
-                        <input placeholder="Digite seu email" type="text" id="email" required className="footer-section-input"></input>
+                        <input placeholder="Digite seu email" autoComplete="off" type="text" id="email" required className="footer-section-input"></input>
                         <button className="footer-section-button" onClick={()=> setModalOpen(true)}>Enviar</button>
                         {modalOpen && (
                             <div className="modal">

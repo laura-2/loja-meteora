@@ -1,112 +1,107 @@
 import React, {useState} from "react"
-import {clothes} from '../../store/data'
+import { Col, Card} from 'react-bootstrap';
 import check from "../../assets/Desktop/Ícones/check-circle.png"
 import close from "../../assets/Desktop/Ícones/Icon Color.png"
-import { Row, Col, Form, Modal, Card} from 'react-bootstrap';
+import {Form, Modal} from 'react-bootstrap';
 import "./cardPrice.css"
-export default function CardPrice (){
-  const [modalShow, setModalShow] = useState(false);
-  const [selectedCard, setSelectedCard] = useState(null);
+export default function CardPrice ({title, imagem, text, price}){
+  const [modalOpen, setModalOpen] = useState(false);
 
-  const handleOpen = (cardId) => {
-      setSelectedCard(cardId);
-      setModalShow(!modalShow)
+  const handleVerMais = () => {
+    setModalOpen(true);
   };
 
-  const listModel = clothes.map(clothes => 
-    <div key={clothes.id}>
-    <Col>
-    <Card className="card-image">
-    <Card.Img variant="top" className="card-image-border" src={clothes.imagem}/>
-    <Card.Body>
-    <Card.Title className="card-title-price">{clothes.title}</Card.Title>
-    <Card.Text className="card-text">
-    {clothes.text}
-    </Card.Text>
-    <Card.Title className="card-title-price">{clothes.price}</Card.Title>
-    <button className="card-button" onClick={()=> handleOpen(clothes.id)}>Ver mais</button>
-  </Card.Body>
-  </Card>
-  </Col>
-  </div>
-  )
-
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+  
   
     return (
       <>
-      <h3 className="title">Produtos que estão bombando!</h3>
-      <Row className="justify-content-md-center mb-4" xs="auto">
-        {listModel}
-      </Row>
-      {selectedCard && (
+      <Col>
+        <Card className="card-image">
+        <Card.Img variant="top" className="card-image-border" src={imagem}/>
+        <Card.Body>
+        <Card.Title className="card-title-price">{title}</Card.Title>
+        <Card.Text className="card-text">
+        {text}
+        </Card.Text>
+        <Card.Title className="card-title-price">{price}</Card.Title>
+        <button className="card-button" onClick={handleVerMais}>Ver mais</button>
+        </Card.Body>
+        </Card>
+        </Col>
+            
+      {modalOpen && (
         <div className="modal">
-          <div className="modal-content">
-          <Modal.Header className="modal-header">
-            <img src={check} alt='Icon check' className="modal-icon"/>
-            <Modal.Title id="contained-modal-title-left" className="modal-title">
-            Confira detalhes sobre o produto
-            </Modal.Title>
-              <img src={close} alt="Icon close" onClick={() => setSelectedCard(!selectedCard)}/>
-          </Modal.Header>
-          <Modal.Body>
-            <div className="modal-flex">
-              <div>
-                <img src={clothes.find((clothes) => clothes.id === selectedCard).imagem} alt='imagem-modelo' className="modal-image"/>
-              </div>
-              <div>
-                  <Modal.Title className="modal-title-price">{clothes.find((clothes) => clothes.id === selectedCard).title}</Modal.Title>
-                  <p className="modal-text">{clothes.find((clothes) => clothes.id === selectedCard).text}</p>
+        <div className="modal-content">
+        <Modal.Header className="modal-header">
+          <img src={check} alt='Icon check' className="modal-icon"/>
+          <Modal.Title id="contained-modal-title-left" className="modal-title">
+          Confira detalhes sobre o produto
+          </Modal.Title>
+            <img src={close} alt="Icon close" onClick={handleCloseModal}/>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="modal-flex">
+            <div>
+              <img src={imagem} alt='imagem-modelo' className="modal-image"/>
+            </div>
+            <div>
+                <Modal.Title className="modal-price">{title}</Modal.Title>
+                <p className="modal-text">{text}</p>
+                <hr/>
+                <Modal.Title className="modal-price">{price}</Modal.Title>
+                <p className="modal-text-light">Vendido e entregue por Riachuelo</p>
+                <hr/>
+                <p className="modal-text-color">Cores:</p>
+                  <Form>
+                  <label className="modal-label">
+                  <input type="radio" name="myRadio" value="option1" className="modal-input"/>
+                  Azul claro
+                </label>
+                <label className="modal-label">
+                  <input type="radio" name="myRadio" value="option1" className="modal-input" />
+                  Offwhite
+                </label>
+                <label className="modal-label">
+                  <input type="radio" name="myRadio" value="option1" className="modal-input" />
+                  Preto
+                </label>
+                  </Form>
                   <hr/>
-                  <Modal.Title className="modal-title-price">{clothes.find((clothes) => clothes.id === selectedCard).price}</Modal.Title>
-                  <p className="modal-text-light">Vendido e entregue por Riachuelo</p>
-                  <hr/>
-                  <p className="modal-text-color">Cores:</p>
-                    <Form>
+                  <p className="modal-text-color">Tamanho:</p>
+                  <Form>
                     <label className="modal-label">
-                    <input type="radio" name="myRadio" value="option1" className="modal-input"/>
-                    Azul claro
-                  </label>
-                  <label className="modal-label">
-                    <input type="radio" name="myRadio" value="option1" className="modal-input" />
-                    Offwhite
-                  </label>
-                  <label className="modal-label">
-                    <input type="radio" name="myRadio" value="option1" className="modal-input" />
-                    Preto
-                  </label>
-                    </Form>
-                    <hr/>
-                    <p className="modal-text-color">Tamanho:</p>
-                    <Form>
-                      <label className="modal-label">
-                        <input type="radio" name="myRadio" value="option1" className="modal-input" />
-                        PP 
-                      </label>
-                      <label className="modal-label">
-                        <input type="radio" name="myRadio" value="option1" className="modal-input" />
-                        P
-                      </label>
-                      <label className="modal-label">
-                        <input type="radio" name="myRadio" value="option1" className="modal-input" />
-                        M
-                      </label>
-                      <label className="modal-label">
                       <input type="radio" name="myRadio" value="option1" className="modal-input" />
-                        G
-                      </label>
-                      <label className="modal-label">
-                        <input type="radio" name="myRadio" value="option1" className="modal-input" />
-                        GG
-                      </label>
-                    </Form>
+                      PP 
+                    </label>
+                    <label className="modal-label">
+                      <input type="radio" name="myRadio" value="option1" className="modal-input" />
+                      P
+                    </label>
+                    <label className="modal-label">
+                      <input type="radio" name="myRadio" value="option1" className="modal-input" />
+                      M
+                    </label>
+                    <label className="modal-label">
+                    <input type="radio" name="myRadio" value="option1" className="modal-input" />
+                      G
+                    </label>
+                    <label className="modal-label">
+                      <input type="radio" name="myRadio" value="option1" className="modal-input" />
+                      GG
+                    </label>
+                  </Form>
 
-                    <button className="modal-button">Adicionar à sacola</button>
-                </div>
+                  <button className="modal-button">Adicionar à sacola</button>
               </div>
-            </Modal.Body>
-         </div>
-         </div>
+            </div>
+          </Modal.Body>
+       </div>
+       </div>
       )}
+      
     </>
     
     )

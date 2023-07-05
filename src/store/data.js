@@ -5,7 +5,7 @@ import Calca from "../assets/Desktop/Imagens Cards/Calça.png"
 import Casaco from "../assets/Desktop/Imagens Cards/Jaqueta.png"
 import Oculos from "../assets/Desktop/Imagens Cards/óculos.png"
 
-export const clothes = [
+export const clothing = [
     { id: 0,
       imagem: Camisa,
       title: 'Camiseta Conforto',
