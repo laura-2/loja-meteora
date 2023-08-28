@@ -4,7 +4,8 @@ import check from "../../assets/Desktop/Ícones/check-circle.png"
 import close from "../../assets/Desktop/Ícones/Icon Color.png"
 import {Form, Modal} from 'react-bootstrap';
 import "./cardPrice.css"
-export default function CardPrice ({title, imagem, text, price}){
+import {useCarrinhoContext} from "../../Context/Carrinho"
+export default function CardPrice ({id, title, imagem, text, price}){
   const [modalOpen, setModalOpen] = useState(false);
 
   const handleVerMais = () => {
@@ -15,10 +16,11 @@ export default function CardPrice ({title, imagem, text, price}){
     setModalOpen(false);
   };
   
-  
+  const {carrinho, adicionarProduto} = useCarrinhoContext()
+  const produtoNoCarrinho = carrinho.find(itemDoCarrinho => itemDoCarrinho.id === id)
     return (
       <>
-      <Col>
+      <Col className="card-all">
         <Card className="card-image">
         <Card.Img variant="top" className="card-image-border" src={imagem}/>
         <Card.Body>
@@ -33,7 +35,7 @@ export default function CardPrice ({title, imagem, text, price}){
         </Col>
             
       {modalOpen && (
-        <div className="modal">
+        <div className="modal"  onSubmit={(e) => e.preventDefault()}>
         <div className="modal-content">
         <Modal.Header className="modal-header">
           <img src={check} alt='Icon check' className="modal-icon"/>
@@ -94,7 +96,10 @@ export default function CardPrice ({title, imagem, text, price}){
                     </label>
                   </Form>
 
-                  <button className="modal-button">Adicionar à sacola</button>
+                  <button className="modal-button" onClick={()=>{
+                    adicionarProduto({id, title, imagem, text, price})
+                  }}>Adicionar à sacola</button>
+                  {produtoNoCarrinho?.quantidade || 0}
               </div>
             </div>
           </Modal.Body>

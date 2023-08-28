@@ -23,6 +23,14 @@
 .header-mobile, .menu-open, .header-search-mobile, .header-input-mobile, .header-button-mobile{
     display: none;
 }
+.header-icons{
+    display: flex;
+    gap: 0.5rem;
+    margin: 0 1%;
+}
+.header-welcome{
+    color: var(--white-color);
+}
 
 
 @media (max-width: 768px){

@@ -7,6 +7,12 @@
     color: var(--black-color-light);
     margin: 5% 0 3% 0;
 }
+.card-all {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 3%;
+
+}
 
 .card-image {
     height: 600px;
