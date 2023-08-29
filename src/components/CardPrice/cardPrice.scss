@@ -1,4 +1,4 @@
-@import url("../../App.css");
+@import url("../../App.scss");
 
 .title {
     text-align: center;
@@ -7,14 +7,14 @@
     color: var(--black-color-light);
     margin: 5% 0 3% 0;
 }
-.card-all {
+.card {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 0 3%;
 
 }
 
-.card-image {
+.cardImage {
     height: 600px;
     width: 350px;
     border-radius: 0%;
@@ -22,26 +22,26 @@
 
 }
 
-.card-image-border {
+.cardImageBorder {
     border-radius: 0%;
 
 }
 
-.card-title-price {
+.cardTitlePrice {
     text-align: start;
     font-size: 16px;
     font-weight: var(--font-weight700);
     color: var(--black-color-light);
 }
 
-.card-text {
+.cardText {
     text-align: start;
     font-size: 13px;
     font-weight: var(--font-weight400);
     color: var(--black-color-light);
 }
 
-.card-button {
+.cardButton {
     text-align: start;
     font-size: 16px;
     font-weight: var(--font-weight500);
@@ -51,57 +51,7 @@
     padding: 5px 16px;
 }
 
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.modal-content {
-    background-color: white;
-    border-radius: 8px;
-    max-width: 800px;
-}
-
-.modal-flex {
-    display: flex;
-    gap: 2rem;
-}
-.modal-price, .modal-text{
-    color: var(--black-color) !important;
-}
-.modal-header {
-    background-color: var(--black-color);
-}
-
-.modal-title {
-    color: var(--white-color);
-    margin-right: 35%;
-}
-
-.modal-label,
-.modal-input {
-    margin: 5px
-}
-
-.modal-button {
-    margin-top: 1rem;
-    font-size: 16px;
-    font-weight: var(--font-weight500);
-    color: var(--white-color);
-    border: 1px solid var(--purple-color);
-    background-color: var(--purple-color);
-    padding: 5px 16px;
-}
-.modal-icon{
-    margin-right: -20px;
-}
 @media(max-width: 768px) {
     .title {
         font-size: 28px;
@@ -140,17 +90,5 @@
     .jacket-card {
         margin-top: 0;
     }
-    .modal-content {
-        max-width: 40%;
-        margin: 1rem;
-    }
-    .modal-image{
-        width: 50%;
-        margin-left: 25%;
-    }
     
-    .modal-flex {
-        display: block;
-        gap: 1rem;
-    }
 }

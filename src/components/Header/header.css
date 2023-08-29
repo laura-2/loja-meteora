@@ -1,4 +1,4 @@
-@import url("../../App.css");
+@import url("../../App.scss");
 
 .header{
     background-color: var(--black-color);
@@ -30,6 +30,18 @@
 }
 .header-welcome{
     color: var(--white-color);
+}
+.cart{
+    color: var(--black-color);
+    font-size: 15px;
+    width: 1.5%;
+    height: 40%;
+    position: absolute;
+    text-align: center;
+    top: 7px;
+    background-color: var(--yellow-color);
+    border: 1px solid var(--yellow-color);
+    border-radius: 10px;
 }
 
 

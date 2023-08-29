@@ -1,5 +1,5 @@
 import Container from 'react-bootstrap/Container';
-import './App.css';
+import './App.scss';
 import Router from './router';
 
 function App() {
