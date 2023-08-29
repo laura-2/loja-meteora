@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import {Col, Card} from 'react-bootstrap';
-import style from "./cardPrice.scss"
+import "./cardPrice.css"
 import CardModal from "../CardModal";
 export default function CardPrice ({id, title, imagem, text, price}){
   const [modalOpen, setModalOpen] = useState(false);
@@ -11,16 +11,16 @@ export default function CardPrice ({id, title, imagem, text, price}){
 
     return (
       <>
-      <Col className={style.card}>
-        <Card className={style.cardImage}>
-        <Card.Img variant="top" className={style.cardImageBorder} src={imagem}/>
+      <Col className="card">
+        <Card className="cardImage">
+        <Card.Img variant="top" className="cardImageBorder" src={imagem}/>
         <Card.Body>
-        <Card.Title className={style.cardTitlePrice}>{title}</Card.Title>
-        <Card.Text className={style.cardText}>
+        <Card.Title className="cardTitlePrice">{title}</Card.Title>
+        <Card.Text className="cardText">
         {text}
         </Card.Text>
-        <Card.Title className={style.cardTitlePrice}>{price}</Card.Title>
-        <button className={style.cardButton} onClick={handleVerMais}>Ver mais</button>
+        <Card.Title className="cardTitlePrice">{price}</Card.Title>
+        <button className="cardButton" onClick={handleVerMais}>Ver mais</button>
         </Card.Body>
         </Card>
         </Col>

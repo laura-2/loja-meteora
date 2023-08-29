@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import {Form, Modal} from 'react-bootstrap';
 import check from "../../assets/Desktop/Ícones/check-circle.png"
 import close from "../../assets/Desktop/Ícones/Icon Color.png"
-import style from "./cardModal.scss"
+import "./cardModal.css"
 import {useCarrinhoContext} from "../../Context/Carrinho"
 export default function CardModal ({id, title, imagem, text, price}){
   const [modalOpen, setModalOpen] = useState(false);
@@ -14,68 +14,68 @@ export default function CardModal ({id, title, imagem, text, price}){
   const {carrinho, adicionarProduto} = useCarrinhoContext()
   const produtoNoCarrinho = carrinho.find(itemDoCarrinho => itemDoCarrinho.id === id)
     return (
-        <div className={style.modal}  onSubmit={(e) => e.preventDefault()}>
-        <div className={style.modalContent}>
-        <Modal.Header className={style.modalHeader}>
-          <img src={check} alt='Icon check' className={style.modalIcon}/>
-          <Modal.Title id="contained-modal-title-left" className={style.modalTitle}>
+        <div className="modal"  onSubmit={(e) => e.preventDefault()}>
+        <div className="modal-content">
+        <Modal.Header className="modal-header">
+          <img src={check} alt='Icon check' className="modal-icon"/>
+          <Modal.Title id="contained-modal-title-left" className="modal-title">
           Confira detalhes sobre o produto
           </Modal.Title>
             <img src={close} alt="Icon close" onClick={handleCloseModal}/>
         </Modal.Header>
         <Modal.Body>
-          <div className={style.modalFlex}>
+          <div className="modal-flex">
             <div>
-              <img src={imagem} alt='imagem-modelo' className={style.modalImage}/>
+              <img src={imagem} alt='imagem-modelo' className="modal-image"/>
             </div>
             <div>
-                <Modal.Title className={style.modalPrice}>{title}</Modal.Title>
-                <p className={style.modalText}>{text}</p>
+                <Modal.Title className="modal-price">{title}</Modal.Title>
+                <p className="modal-text">{text}</p>
                 <hr/>
-                <Modal.Title className={style.modalPrice}>{price}</Modal.Title>
-                <p className={style.modalTextLight}>Vendido e entregue por Riachuelo</p>
+                <Modal.Title className="modal-price">{price}</Modal.Title>
+                <p className="modal-text-light">Vendido e entregue por Riachuelo</p>
                 <hr/>
-                <p className={style.modalTextColor}>Cores:</p>
+                <p className="modal-text-color">Cores:</p>
                   <Form>
-                  <label className={style.modalLabel}>
-                  <input type="radio" name="myRadio" value="option1" className={style.modalInput}/>
+                  <label className="modal-label">
+                  <input type="radio" name="myRadio" value="option1" className="modal-input"/>
                   Azul claro
                 </label>
-                <label className={style.modalLabel}>
-                  <input type="radio" name="myRadio" value="option1" className={style.modalInput} />
+                <label className="modal-label">
+                  <input type="radio" name="myRadio" value="option1" className="modal-input" />
                   Offwhite
                 </label>
-                <label className={style.modalLabel}>
-                  <input type="radio" name="myRadio" value="option1" className={style.modalInput} />
+                <label className="modal-label">
+                  <input type="radio" name="myRadio" value="option1" className="modal-input" />
                   Preto
                 </label>
                   </Form>
                   <hr/>
-                  <p className={style.modalTextColor}>Tamanho:</p>
+                  <p className="modal-text-color">Tamanho:</p>
                   <Form>
-                    <label className={style.modalLabel}>
-                      <input type="radio" name="myRadio" value="option1" className={style.modalInput} />
+                    <label className="modal-label">
+                      <input type="radio" name="myRadio" value="option1" className="modal-input" />
                       PP 
                     </label>
-                    <label className={style.modalLabel}>
-                      <input type="radio" name="myRadio" value="option1" className={style.modalInput} />
+                    <label className="modal-label">
+                      <input type="radio" name="myRadio" value="option1" className="modal-input" />
                       P
                     </label>
-                    <label className={style.modalLabel}>
-                      <input type="radio" name="myRadio" value="option1" className={style.modalInput} />
+                    <label className="modal-label">
+                      <input type="radio" name="myRadio" value="option1" className="modal-input" />
                       M
                     </label>
-                    <label className={style.modalLabel}>
-                    <input type="radio" name="myRadio" value="option1" className={style.modalInput} />
+                    <label className="modal-label">
+                    <input type="radio" name="myRadio" value="option1" className="modal-input" />
                       G
                     </label>
-                    <label className={style.modalLabel}>
-                      <input type="radio" name="myRadio" value="option1" className={style.modalInput} />
+                    <label className="modal-label">
+                      <input type="radio" name="myRadio" value="option1" className="modal-input" />
                       GG
                     </label>
                   </Form>
 
-                  <button className={style.modalButton} onClick={()=>{
+                  <button className="modal-button" onClick={()=>{
                     adicionarProduto({id, title, imagem, text, price})
                   }}>Adicionar à sacola</button>
                   {produtoNoCarrinho?.quantidade || 0}
