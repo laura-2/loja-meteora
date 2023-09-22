@@ -9,9 +9,8 @@
 }
 .card {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 0 3%;
-
+    justify-content: center;
+    margin: 0 15% 0 10%;
 }
 
 .cardImage {

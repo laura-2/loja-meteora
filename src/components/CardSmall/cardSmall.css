@@ -8,6 +8,7 @@
 }
 .category-section{
     border-radius: 0%;
+    display: block;
 }
 .category-image{
     border-radius: 0%;
